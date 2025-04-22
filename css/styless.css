@@ -309,8 +309,15 @@ a {
 .hero-img {
     position: absolute;
     width: 100%;
-    object-fit: cover;
     z-index: -1;
+    overflow: hidden;
+}
+
+.hero-img .img-fluid {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .hero-content {
@@ -845,14 +852,102 @@ a {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* responsive */
-@media (min-width: 640px) {
-    .services-grid {
-      grid-template-columns: repeat(2, 1fr);
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .top-bar {
+        display: none;
+    }
+    .logo {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  
+    .navbar .container {
+      padding-left: 0 !important;
     }
   }
-  @media (min-width: 1024px) {
-    .services-grid {
-      grid-template-columns: repeat(3, 1fr);
+  
+/*hero-section*/
+@media screen  and (max-width: 768px) {
+    .hero-section {
+        height: 400px;
+    }
+    .hero-img {
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .hero-content h2 {
+        font-size: 36px;
+    }
+}
+    
+@media screen and (max-width: 768px) { 
+    .about-us .row {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card {
+        border: none;
+        margin-top: 10px;
+    }
+
+    .about-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .about-content-1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px)  {
+    .services-card {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 768px) {
+    .staff .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* social */
+@media screen and (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .social-icons {
+      margin-top: 20px;
+    }
+  
+    .footer-info,
+    .footer-sitemap,
+    .footer-services,
+    .footer-map {
+      margin-bottom: 30px;
+    }
+  
+    .footer-content > div {
+      width: 100%;
     }
   }
+
+  @media (max-width: 768px) {
+    #backToTop {
+      display: none !important;
+    }
+  }
+
+

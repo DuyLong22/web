@@ -22,77 +22,272 @@
         </div>
     </div>
 
-<!-- Header Section -->
-<header class="header">
-  <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container d-flex align-items-center">
-          <div class="logo me-4">
-            <a href="index.html">
-              <img src="img/logo.png" alt="ThaDuco Logistics">
-            </a>
-          </div>
-
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav align-items-center">
-                  <li class="nav-item">
-                      <a class="nav-link" href="index.html" data-i18n="home">HOME</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="about.html" data-i18n="aboutUs">ABOUT US</a>
-                  </li>
-                  <li class="nav-item dropdown custom-dropdown">
-                      <a class="nav-link dropdown-toggle" href="services.html" data-i18n="services">
-                          SERVICES
+          <!-- Header Section -->
+          <header class="header hidden">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container d-flex align-items-center">
+                    <div class="logo me-4">
+                      <a href="index.html">
+                        <img src="img/logo.png" alt="ThaDuco Logistics">
                       </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="services1.html" data-i18n="consulting">Consultance on Intergrated Logistics</a></li>
-                        <li><a class="dropdown-item" href="services2.html" data-i18n="transit">Cargo in transit to Laos/Cambodia</a></li>
-                        <li><a class="dropdown-item" href="services3.html" data-i18n="multimodal">Multimodal Transport Service</a></li>
-                        <li><a class="dropdown-item" href="services4.html" data-i18n="warehousing">Warehousing – Distribution Services</a></li>
-                        <li><a class="dropdown-item" href="services5.html" data-i18n="customs">Customs Brokerage & Clearance</a></li>
-                        <li><a class="dropdown-item" href="services6.html" data-i18n="projectCargo">Project Cargo</a></li>
-                        <li><a class="dropdown-item" href="services7.html" data-i18n="moving">Moving & Distribution Service</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="staff.html" data-i18n="staff">STAFF</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="news.html" data-i18n="news">NEWS</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="activities.html" data-i18n="activities">ACTIVITIES</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="recruitment.html" data-i18n="recruitment">RECRUITMENT</a>
-                  </li>
-                  <li class="nav-item contact-item">
-                      <a class="nav-link" href="contact.html" data-i18n="contact">CONTACT</a>
-                  </li>
-              </ul>
+                    </div>
+                    <!-- Hamberger -->
+                    <button class="hamburger d-lg-none" id="hamburgerBtn">
+                      <i class="fas fa-bars"></i>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html" data-i18n="home">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html" data-i18n="aboutUs">ABOUT US</a>
+                            </li>
+                            <li class="nav-item dropdown custom-dropdown">
+                                <a class="nav-link dropdown-toggle active" href="services.html" data-i18n="services">
+                                    SERVICES
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="services1.html" data-i18n="consulting">Consultance on Intergrated Logistics</a></li>
+                                  <li><a class="dropdown-item" href="services2.html" data-i18n="transit">Cargo in transit to Laos/Cambodia</a></li>
+                                  <li><a class="dropdown-item" href="services3.html" data-i18n="multimodal">Multimodal Transport Service</a></li>
+                                  <li><a class="dropdown-item" href="services4.html" data-i18n="warehousing">Warehousing – Distribution Services</a></li>
+                                  <li><a class="dropdown-item" href="services5.html" data-i18n="customs">Customs Brokerage & Clearance</a></li>
+                                  <li><a class="dropdown-item" href="services6.html" data-i18n="projectCargo">Project Cargo</a></li>
+                                  <li><a class="dropdown-item" href="services7.html" data-i18n="moving">Moving & Distribution Service</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="staff.html" data-i18n="staff">STAFF</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="news.html" data-i18n="news">NEWS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="activities.html" data-i18n="activities">ACTIVITIES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="recruitment.html" data-i18n="recruitment">RECRUITMENT</a>
+                            </li>
+                            <li class="nav-item contact-item">
+                                <a class="nav-link" href="contact.html" data-i18n="contact">CONTACT</a>
+                            </li>
+    
+                             <div class="language-selector ms-3">
+                                <a data-lang="en" class="active"><img src="img/flagen.jpg" alt="English" class="flag-icon"> EN</a>
+                                <a data-lang="vi"><img src="img/flagvn.png" alt="Vietnamese" class="flag-icon"> VI</a>
+                              </div>
+                        </ul>
+                    </div>
+                    <div class="search-box d-none d-lg-block">
+                      <div class="search-container">
+                          <input type="text" class="search-input" placeholder="Search..." data-i18n="search">
+                          <button class="search-button">
+                              <i class="fas fa-search"></i>
+                          </button>
+                      </div>
+                  </div>
+                </div>
+            </nav>
+        </header>
 
-              <div class="language-selector ms-3">
-                <a data-lang="en" class="active"><img src="img/flagen.jpg" alt="English" class="flag-icon"> EN</a>
-                <a data-lang="vi"><img src="img/flagvn.png" alt="Vietnamese" class="flag-icon"> VI</a>
-            </div>
+        <div class="menu-backdrop" id="menuBackdrop"></div>
 
-          </div>
-
-          <div class="search-box">
-            <div class="search-container">
-                <input type="text" class="search-input" placeholder="Search..." data-i18n="search">
-                <button class="search-button">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-        </div>
+        <style>
+          .menu-backdrop {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5); /* màu nền tối mờ */
+            z-index: 9997;
+            display: none;
+          }
+          .menu-backdrop.active {
+            display: block;
+          }          
+        </style>
+    
+        <!-- Fullscreen Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+      <button class="close-btn" id="closeMenu"><i class="fas fa-times"></i></button>
+      <div class="search-mobile-container">
+        <input type="text" placeholder="Search..." />
+        <button><i class="fas fa-search"></i></button>
       </div>
-  </nav>
-</header>
+      <ul class="menu-list">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li class="has-dropdown">
+          <div class="dropdown-header">
+            <a href="services.html" class="services-link">SERVICES</a>
+            <span class="dropdown-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+          </div>
+          <ul class="submenu">
+            <li><a class="dropdown-item" href="services1.html" data-i18n="consulting">Consultance on Intergrated Logistics</a></li>
+            <li><a class="dropdown-item" href="services2.html" data-i18n="transit">Cargo in transit to Laos/Cambodia</a></li>
+            <li><a class="dropdown-item" href="services3.html" data-i18n="multimodal">Multimodal Transport Service</a></li>
+            <li><a class="dropdown-item" href="services4.html" data-i18n="warehousing">Warehousing – Distribution Services</a></li>
+            <li><a class="dropdown-item" href="services5.html" data-i18n="customs">Customs Brokerage & Clearance</a></li>
+            <li><a class="dropdown-item" href="services6.html" data-i18n="projectCargo">Project Cargo</a></li>
+            <li><a class="dropdown-item" href="services7.html" data-i18n="moving">Moving & Distribution Service</a></li>
+          </ul>
+        </li>
+        <li><a href="staff.html">STAFF</a></li>
+        <li><a href="news.html">NEWS</a></li>
+        <li><a href="activities.html">ACTIVITIES</a></li>
+        <li><a href="recruitment.html">RECRUITMENT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+    
+    <!-- CSS -->
+    <style>
+   /* Toàn bộ body */
+body {
+  font-family: 'Archivo', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--white-color);
+}
+
+/* Khi menu di động mở, không cuộn trang */
+body.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Hamburger menu */
+.hamburger {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 5px;
+  font-size: 13px;
+  z-index: 9999;
+}
+
+/* Submenu */
+.submenu {
+  padding: 0;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+  box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+}
+
+.submenu li a {
+  display: block;
+  padding: 6px 15px;
+  margin: 0;
+  line-height: 1.3;
+  font-size: 16px;
+  color: #666666;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  background-color: #ddd; /* Màu nền khi hover */
+}
+
+/* Khi dropdown mở */
+.has-dropdown.open .dropdown-header a {
+  color: #111111D9;
+}
+
+.has-dropdown.open .submenu {
+  display: flex;
+  background-color: #F5F5F5;
+}
+
+.has-dropdown .dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-header a {
+  font-size: 12px;
+}
+
+.dropdown-toggle-icon {
+  cursor: pointer;
+  padding-left: 10px;
+  color: #666666D9;
+}
+
+/* Mobile menu overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%; /* Có thể điều chỉnh */
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 9998;
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+  box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+}
+
+.mobile-menu-overlay.active {
+  display: flex;
+}
+
+/* Nút đóng menu */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+/* Danh sách menu */
+.menu-list {
+  list-style: none;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.menu-list > li {
+  padding: 12px 0;
+  color: #666666;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-list > a {
+  text-decoration: none;
+  color: #666666D9;
+}
+
+/* Search container trong mobile menu */
+.search-mobile-container {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+
+.search-mobile-container input {
+  border: none;
+  flex: 1;
+  outline: none;
+  padding-left: 10px;
+}
+
+.search-mobile-container button {
+  background: none;
+  border: none;
+  font-size: 16px;
+}
+    </style>
 
        <!-- Hero Section -->
        <section id="home" class="hero-section">

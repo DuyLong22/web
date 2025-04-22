@@ -458,13 +458,7 @@ h1::after {
     margin-top: 100px;
     margin-bottom: 50px;
 }
-  /* === Responsive === */
-  @media (max-width: 768px) {
-    .info-form {
-      flex-direction: column;
-    }
-  }
-
+ 
 /* Footer */
 .footer {
     background-color: var(--primary-color);
@@ -677,3 +671,76 @@ h1::after {
     display: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .top-bar {
+        display: none;
+    }
+    .logo {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  
+    .navbar .container {
+      padding-left: 0 !important;
+    }
+
+    .contact h1 {
+        font-size: 22px;
+    }
+
+    .contact span {
+        font-size: 12px;
+    }
+
+    .slideshow-container {
+        margin-top: -50px;
+    }
+
+    .prev, .next {
+        display: none;
+    }
+
+    .info-form {
+        flex-direction: column;
+    }
+    
+    .info-box h2, .form-box h2 {
+        font-size: 19px;
+    }
+
+  }
+  
+
+/* social */
+@media screen and (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .social-icons {
+      margin-top: 20px;
+    }
+  
+    .footer-info,
+    .footer-sitemap,
+    .footer-services,
+    .footer-map {
+      margin-bottom: 30px;
+    }
+  
+    .footer-content > div {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #backToTop {
+      display: none !important;
+    }
+  }
+
+

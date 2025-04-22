@@ -164,3 +164,64 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+/* MOBILE */
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMenu = document.getElementById('closeMenu');
+const backdrop = document.getElementById('menuBackdrop');
+
+function toggleMenu(open) {
+  mobileMenu.classList.toggle('active', open);
+  backdrop.classList.toggle('active', open);
+  document.body.classList.toggle('no-scroll', open);
+}
+
+hamburgerBtn.addEventListener('click', () => toggleMenu(true));
+closeMenu.addEventListener('click', () => toggleMenu(false));
+backdrop.addEventListener('click', () => toggleMenu(false));
+
+// Toggle submenu dropdown
+document.querySelectorAll('.has-dropdown > a').forEach(item => {
+  item.addEventListener('click', e => {
+    e.preventDefault();
+    item.parentElement.classList.toggle('open');
+  });
+});
+
+document.querySelectorAll('.dropdown-toggle-icon').forEach(icon => {
+  icon.addEventListener('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation(); // Ngăn sự kiện từ thẻ <a>
+    this.closest('.has-dropdown').classList.toggle('open');
+  });
+});
+
+
+/* liên hệ */
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contact-form');
+  
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Ngừng việc chuyển trang
+
+    const formData = new FormData(form);
+
+    fetch("https://formcarry.com/s/cYfSaIMecEk", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === "success") {
+        form.reset(); // Reset form sau khi gửi thành công
+        alert("Tin nhắn đã được gửi thành công!"); // Thông báo đơn giản qua alert
+      } else {
+        alert("Có lỗi xảy ra. Vui lòng thử lại.");
+      }
+    })
+    .catch(error => {
+      alert("Lỗi khi gửi: " + error.message);
+    });
+  });
+});
