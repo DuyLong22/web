@@ -996,4 +996,9 @@ a {
     }
   }
 
-
+@media screen and (max-width: 768px) {
+    .news-section > .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
