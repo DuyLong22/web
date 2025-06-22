@@ -1,0 +1,650 @@
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thaduco Logistics - Thời gian của bạn là nhiệm vụ của chúng tôi</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+<script src="js/translations.js"></script>
+<script src="js/language.js"></script>
+</head>
+<body>
+
+<div class="top-bar">
+<div class="container">
+<div class="Welcome">Chào mừng bạn đến<strong>Thadu Co Logistics.</strong></div>
+<div class="contact-info">
+<span><i class="fas fa-phone-alt"></i>+84 938 239 379</span>
+<span><i class="fas fa-envelope"></i>contact@thaducologists.vn</span>
+</div>
+</div>
+</div>
+
+<header class="header hidden">
+<nav class="navbar navbar-expand-lg navbar-light">
+<div class="container d-flex align-items-center">
+<div class="logo me-4">
+<a href="index.html">
+<img alt="ThaDuco Logistics" src="img/logo.png"/>
+</a>
+</div>
+
+<button class="hamburger d-lg-none" id="hamburgerBtn">
+<i class="fas fa-bars"></i>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav align-items-center">
+<li class="nav-item">
+<a class="nav-link active" href="index.html">TRANG CHỦ</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="about.html">VỀ CHÚNG TÔI</a>
+</li>
+<li class="nav-item dropdown custom-dropdown">
+<a class="nav-link dropdown-toggle" href="services.html">DỊCH VỤ</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="services1.html">Tư vấn về hậu cần xen kẽ</a></li>
+<li><a class="dropdown-item" href="services2.html">Hàng hóa quá cảnh đến Lào/Campuchia</a></li>
+<li><a class="dropdown-item" href="services3.html">Dịch vụ vận chuyển đa phương thức</a></li>
+<li><a class="dropdown-item" href="services4.html">Kho lưu trữ - Dịch vụ phân phối</a></li>
+<li><a class="dropdown-item" href="services5.html">Môi giới hải quan &amp; giải phóng mặt bằng</a></li>
+<li><a class="dropdown-item" href="services6.html">Hàng hóa dự án</a></li>
+<li><a class="dropdown-item" href="services7.html">Dịch vụ di chuyển &amp; phân phối</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="staff.html">NHÂN VIÊN</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="news.html">TIN TỨC</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="activities.html">HOẠT ĐỘNG</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="recruitment.html">TUYỂN DỤNG</a>
+</li>
+<li class="nav-item contact-item">
+<a class="nav-link" href="contact.html">LIÊN HỆ</a>
+</li>
+<div class="language-selector ms-3">
+  <a href="javascript:void(0)" data-lang="en" onclick="switchLanguage('en')"><img src="img/flagen.jpg" alt="English" class="flag-icon"> EN</a>
+  <a href="javascript:void(0)" data-lang="vi" onclick="switchLanguage('vi')"><img src="img/flagvn.png" alt="Vietnamese" class="flag-icon"> VI</a>
+</div>
+</ul>
+</div>
+<div class="search-box d-none d-lg-block">
+<div class="search-container">
+<input class="search-input" placeholder="Search..." type="text"/>
+<button class="search-button">
+<i class="fas fa-search"></i>
+</button>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="menu-backdrop" id="menuBackdrop"></div>
+ <style>
+          .menu-backdrop {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5); /* màu nền tối mờ */
+            z-index: 9997;
+            display: none;
+          }
+          .menu-backdrop.active {
+            display: block;
+          }          
+        </style>
+    
+      <!-- Fullscreen Mobile Menu -->
+      <div class="mobile-menu-overlay" id="mobileMenu">
+<button class="close-btn" id="closeMenu"><i class="fas fa-times"></i></button>
+<div class="search-mobile-container">
+<input placeholder="Search..." type="text">
+<button><i class="fas fa-search"></i></button>
+</div>
+<ul class="menu-list">
+<li><a href="index.html">TRANG CHỦ</a></li>
+<li><a href="about.html">VỀ CHÚNG TÔI</a></li>
+<li class="has-dropdown">
+<div class="dropdown-header">
+<a class="services-link" href="services.html">DỊCH VỤ</a>
+<span class="dropdown-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+</div>
+<ul class="submenu">
+<li><a class="dropdown-item" href="services1.html">Tư vấn về hậu cần xen kẽ</a></li>
+<li><a class="dropdown-item" href="services2.html">Hàng hóa quá cảnh đến Lào/Campuchia</a></li>
+<li><a class="dropdown-item" href="services3.html">Dịch vụ vận chuyển đa phương thức</a></li>
+<li><a class="dropdown-item" href="services4.html">Kho lưu trữ - Dịch vụ phân phối</a></li>
+<li><a class="dropdown-item" href="services5.html">Môi giới hải quan &amp; giải phóng mặt bằng</a></li>
+<li><a class="dropdown-item" href="services6.html">Hàng hóa dự án</a></li>
+<li><a class="dropdown-item" href="services7.html">Dịch vụ di chuyển &amp; phân phối</a></li>
+</ul>
+</li>
+<li><a href="staff.html">NHÂN VIÊN</a></li>
+<li><a href="news.html">TIN TỨC</a></li>
+<li><a href="activities.html">HOẠT ĐỘNG</a></li>
+<li><a href="recruitment.html">TUYỂN DỤNG</a></li>
+<li><a href="contact.html">LIÊN HỆ</a></li>
+</ul>
+<div class="language-selector mobile-language-selector">
+  <a href="javascript:void(0)" onclick="switchLanguage('en')"><img src="img/flagen.jpg" alt="English" class="flag-icon"> EN</a>
+  <a href="javascript:void(0)" onclick="switchLanguage('vi')"><img src="img/flagvn.png" alt="Vietnamese" class="flag-icon"> VI</a>
+</div>
+</div>
+    <!-- CSS -->
+    <style>
+   /* Toàn bộ body */
+body {
+  font-family: 'Archivo', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--white-color);
+}
+
+/* Khi menu di động mở, không cuộn trang */
+body.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Hamburger menu */
+.hamburger {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 5px;
+  font-size: 13px;
+  z-index: 9999;
+}
+
+/* Submenu */
+.submenu {
+  padding: 0;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+  box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+}
+
+.submenu li a {
+  display: block;
+  padding: 6px 15px;
+  margin: 0;
+  line-height: 1.3;
+  font-size: 16px;
+  color: #666666;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  background-color: #ddd; /* Màu nền khi hover */
+}
+
+/* Khi dropdown mở */
+.has-dropdown.open .dropdown-header a {
+  color: #111111D9;
+}
+
+.has-dropdown.open .submenu {
+  display: flex;
+  background-color: #F5F5F5;
+}
+
+.has-dropdown .dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-header a {
+  font-size: 12px;
+}
+
+.dropdown-toggle-icon {
+  cursor: pointer;
+  padding-left: 10px;
+  color: #666666D9;
+}
+
+/* Mobile menu overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%; /* Có thể điều chỉnh */
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 9998;
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+  box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+}
+
+.mobile-menu-overlay.active {
+  display: flex;
+}
+
+/* Nút đóng menu */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+/* Danh sách menu */
+.menu-list {
+  list-style: none;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.menu-list > li {
+  padding: 12px 0;
+  color: #666666;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-list > a {
+  text-decoration: none;
+  color: #666666D9;
+}
+
+/* Search container trong mobile menu */
+.search-mobile-container {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+
+.search-mobile-container input {
+  border: none;
+  flex: 1;
+  outline: none;
+  padding-left: 10px;
+}
+
+.search-mobile-container button {
+  background: none;
+  border: none;
+  font-size: 16px;
+}
+    </style>
+
+<section class="hero-section" id="home">
+<video autoplay="" class="hero-video" loop="" muted="">
+<source src="img/video-banner-isolution.mp4" type="video/mp4"/>
+</video>
+<div class="container">
+<div class="hero-content text-center">
+<h1>Công ty Thadu Co Trading &amp; Services, Ltd</h1>
+<h2>Thời gian của bạn là nhiệm vụ của chúng tôi</h2>
+<a class="btn btn-primary" href="about.html">Xem thêm</a>
+</div>
+</div>
+</section>
+
+<section class="features-section">
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+<div class="feature-item">
+<div class="feature-icon">
+<img alt="Staffs" src="img/staff.png"/>
+</div>
+<div class="feature-text">
+<h3>Nhân viên</h3>
+<p>Chúng tôi có một nhóm có nhiều kinh nghiệm</p>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="feature-item">
+<div class="feature-icon">
+<img alt="Network" src="img/network.png"/>
+</div>
+<div class="feature-text">
+<h3>Mạng</h3>
+<p>Hơn 150 quốc gia và vùng lãnh thổ</p>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="feature-item">
+<div class="feature-icon">
+<img alt="Support" src="img/support.png"/>
+</div>
+<div class="feature-text">
+<h3>Ủng hộ</h3>
+<p>Tư vấn 24/7</p>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="feature-item">
+<div class="feature-icon">
+<img alt="Transportation" src="img/transport.png"/>
+</div>
+<div class="feature-text">
+<h3>kho và vận chuyển ngoại quan</h3>
+<p>Toàn cầu và an toàn</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="about-section" id="about">
+<div class="container">
+<div class="about-content">
+<div class="about-image">
+<img alt="Logistics Services" class="img-fluid" src="img/hinh1.jpg"/>
+</div>
+<div class="about-text">
+<h2>Thadu Co Trading &amp; Services</h2>
+<h3>Thời gian của bạn là nhiệm vụ của chúng tôi</h3>
+<p><strong>Thadu Co Trading &amp; Services Co.</strong>là một đơn vị hàng đầu trong lĩnh vực hậu cần tại Việt Nam. Với một nhóm các chuyên gia có kinh nghiệm và hệ thống công nghệ hiện đại, chúng tôi cung cấp nhiều dịch vụ hậu cần, từ vận chuyển đến quản lý kho, để đáp ứng tất cả các nhu cầu của khách hàng với sự tin tưởng và hiệu quả cao.</p>
+<a class="btn btn-primary" href="about.html">Xem thêm</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="staff-section" id="staff">
+<div class="container">
+<h2 class="text-center">Cấu trúc tổ chức nhân sự</h2>
+<h3 class="text-center">Thadu Co Trading &amp; Services</h3>
+<h4 class="text-center">Thời gian của bạn là nhiệm vụ của chúng tôi</h4>
+<div class="staff-structure">
+<img alt="Staff Structure" class="img-fluid" src="img/s.jpg"/>
+</div>
+<div class="text-center">
+<a class="btn btn-primary" href="staff.html">Xem thêm</a>
+</div>
+</div>
+</section>
+
+<section class="shipping-process">
+<div class="container">
+
+<div class="shipping-content">
+<div class="shipping-process-content">
+<h2>Quy trình vận chuyển</h2>
+<h3>Thadu Co Trading &amp; Services</h3>
+<h4>Thời gian của bạn là nhiệm vụ của chúng tôi</h4>
+</div>
+
+<div class="process-steps">
+<div class="step-column left-column">
+<div class="step">
+<div class="step-number">1</div>
+<div class="step-content">
+<h4>Bước 1</h4>
+<p>Nhận thông tin khách hàng</p>
+</div>
+</div>
+<div class="step">
+<div class="step-number">2</div>
+<div class="step-content">
+<h4>Bước 2</h4>
+<p>Trích dẫn theo nhu cầu của khách hàng</p>
+</div>
+</div>
+<div class="step">
+<div class="step-number">3</div>
+<div class="step-content">
+<h4>Bước 3</h4>
+<p>Kiểm tra tình trạng lô hàng</p>
+</div>
+</div>
+</div>
+<div class="step-column right-column">
+<div class="step">
+<div class="step-number">4</div>
+<div class="step-content">
+<h4>Bước 4</h4>
+<p>Theo dõi và thông báo cho khách hàng về các lô hàng</p>
+</div>
+</div>
+<div class="step">
+<div class="step-number">5</div>
+<div class="step-content">
+<h4>Bước 5</h4>
+<p>Hàng hóa đến điểm đến của người nhận</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="shipping-image">
+<img alt="Shipping Process" class="img-fluid" src="img/hinh2.jpg"/>
+</div>
+</div>
+</section>
+
+<section class="services">
+<div class="container">
+<h2>Dịch vụ của chúng tôi</h2>
+<h3>Thadu Co Trading &amp; Services</h3>
+<h4>Thời gian của bạn là nhiệm vụ của chúng tôi</h4>
+<div class="services-grid">
+<div class="services-row row-top">
+<a class="service-item" href="services1.html">
+<div class="service-image">
+<img alt="Consultance" src="https://ext.same-assets.com/1141012312/2285503477.jpeg"/>
+</div>
+<h4>Tư vấn về Quản lý chuỗi cung ứng &amp; Hậu cần xen kẽ</h4>
+</a>
+<a class="service-item" href="services2.html">
+<div class="service-image">
+<img alt="Cargo Transit" src="https://ext.same-assets.com/1141012312/30877369.jpeg"/>
+</div>
+<h4>Hàng hóa quá cảnh đến Lào/ Campuchia</h4>
+</a>
+<a class="service-item" href="services3.html">
+<div class="service-image">
+<img alt="Multimodal Transport" src="https://ext.same-assets.com/1141012312/1443369914.jpeg"/>
+</div>
+<h4>Dịch vụ vận chuyển đa phương thức</h4>
+</a>
+</div>
+<div class="services-row row-bottom">
+<a class="service-item" href="services4.html">
+<div class="service-image">
+<img alt="Door to Door" src="https://ext.same-assets.com/1141012312/2744325528.jpeg"/>
+</div>
+<h4>Dịch vụ cửa đến cửa</h4>
+</a>
+<a class="service-item" href="services5.html">
+<div class="service-image">
+<img alt="Project Cargo" src="https://ext.same-assets.com/1141012312/3420321818.jpeg"/>
+</div>
+<h4>Hàng hóa dự án</h4>
+</a>
+<a class="service-item" href="services6.html">
+<div class="service-image">
+<img alt="Customs Brokerage" src="https://ext.same-assets.com/1141012312/205315616.jpeg"/>
+</div>
+<h4>Môi giới hải quan &amp; giải phóng mặt bằng</h4>
+</a>
+<a class="service-item" href="services7.html">
+<div class="service-image">
+<img alt="Moving &amp; Distribution" src="https://ext.same-assets.com/1141012312/4287967522.jpeg"/>
+</div>
+<h4>Dịch vụ di chuyển &amp; phân phối</h4>
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="choose-us">
+<div class="container">
+<h2>Tại sao bạn nên chọn?</h2>
+<h3>Thadu Co Trading &amp; Services</h3>
+<h4>Thời gian của bạn là nhiệm vụ của chúng tôi</h4>
+<div class="choose-content">
+<div class="choose-form">
+<h4>Để lại thông tin của bạn để nhận được tư vấn miễn phí!</h4>
+<form class="consultation-form" id="contact-form">
+<div class="form-group">
+<input name="name" placeholder="Your name" type="text"/>
+</div>
+<div class="form-group">
+<input name="phone" placeholder="Your phone number" type="text"/>
+</div>
+<div class="form-group">
+<input name="email" placeholder="Your email" type="email"/>
+</div>
+<div class="form-group">
+<textarea name="message" placeholder="Message"></textarea>
+</div>
+<button class="btn btn-primary" type="submit">GỬI</button>
+</form>
+</div>
+<div class="choose-text">
+<p>Thadu Co Trading &amp; Services cung cấp các giải pháp hậu cần toàn diện cho các nhà sản xuất và công ty thương mại, hợp tác với các thương hiệu mới nổi và thành lập chủ yếu.</p>
+<p>Nhân viên giao dịch &amp; dịch vụ của Thadu Co được tự do theo đuổi đam mê và làm việc trong một môi trường nuôi dưỡng lợi ích của họ, nó tạo tiền đề cho kết quả đặc biệt và lực lượng lao động thịnh vượng!</p>
+<p>Cung cấp quy trình vận hành tiêu chuẩn hiệu quả cho mỗi yêu cầu về việc thực hiện chi phí khả năng chi trả.</p>
+<p>Bạn cũng sẽ được đảm bảo về việc giao hàng kịp thời và được đảm bảo. Chúng tôi hứa với bạn một giải pháp giao hàng mà bạn không còn cần phải lo lắng.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="news">
+<div class="container">
+<h2>Tin tức</h2>
+<h3>Thadu Co Trading &amp; Services</h3>
+<h4>Thời gian của bạn là nhiệm vụ của chúng tôi</h4>
+<div class="news-grid">
+<a class="news-item" href="news1.html">
+<div class="news-image">
+<img alt="News 1" src="img/new1.jpg"/>
+</div>
+<div class="news-content">
+<h4>Hoa Kỳ chính thức áp dụng thuế quan trả đũa đối với hơn 80 nền kinh tế</h4>
+<p class="news-date">Ngày 5 tháng 4 năm 2025</p>
+<p>Bắt đầu từ 12:01 sáng ngày 9 tháng 4 năm 2025 (giờ phương Đông), hoặc 11:01 giờ giờ Việt Nam, Hoa Kỳ chính thức ...</p>
+</div>
+</a>
+<a class="news-item" href="news2.html">
+<div class="news-image">
+<img alt="News 2" src="img/new2.jpg"/>
+</div>
+<div class="news-content">
+<h4>Hoa Kỳ áp đặt thuế quan quét: Việt Nam đạt tỷ lệ 46%, chuỗi cung ứng toàn cầu có nguy cơ</h4>
+<p class="news-date">16 tháng 3 năm 2025</p>
+<p>Vào ngày 2 tháng 4 năm 2025, Tổng thống Donald Trump tuyên bố và thực hiện thuế quan mới, mà ông đã tuyên bố ...</p>
+</div>
+</a>
+<a class="news-item" href="news3.html">
+<div class="news-image">
+<img alt="News 3" src="img/new4.jpg"/>
+</div>
+<div class="news-content">
+<h4>Việt Nam xuất khẩu hải sản bùng nổ: Khủng hoảng cơ hội hay chuỗi cung ứng?</h4>
+<p class="news-date">14 tháng 3 năm 2025</p>
+<p>Thay đổi chính sách thương mại của Canadas vào đầu năm 2024 đang mở ra những cơ hội quan trọng cho xuất khẩu của Việt Nam, ...</p>
+</div>
+</a>
+<a class="news-item" href="news4.html">
+<div class="news-image">
+<img alt="News 4" src="img/new3.jpg"/>
+</div>
+<div class="news-content">
+<h4>EU không áp dụng các biện pháp phòng thủ thuế và phi thuế đối với Việt Nam</h4>
+<p class="news-date">Ngày 6 tháng 3 năm 2025</p>
+<p>Vào tháng 1 năm 2025, Liên minh châu Âu (EU) sẽ không áp dụng các biện pháp phòng thủ thuế và phi thuế đối với ...</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-info">
+<h3>Công ty Thadu Co Trading &amp; Services, Ltd</h3>
+<p><i class="fas fa-map-marker-alt contact-icon"></i> Head Office: WQ43+Q9M, 25a Phạm Hữu Lầu, Khu Phố Thống Nhất 1, Dĩ An, Bình Dương, Việt Nam</p>
+<p><i class="fas fa-phone contact-icon"></i> +84 938 239 379</p>
+<p><i class="fas fa-envelope contact-icon"></i> contact@thaducologists.vn</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fas fa-envelope"></i></a>
+<a href="#"><i class="fas fa-phone"></i></a>
+</div>
+</div>
+<div class="footer-sitemap">
+<h3>Sơ đồ trang web</h3>
+<ul>
+<li><a href="index.html">Trang chủ</a></li>
+<li><a href="about.html">Về chúng tôi</a></li>
+<li><a href="services.html">Dịch vụ</a></li>
+<li><a href="news.html">Tin tức</a></li>
+<li><a href="recruitment.html">Tuyển dụng</a></li>
+<li><a href="contact.html">Liên hệ</a></li>
+</ul>
+</div>
+<div class="footer-services">
+<h3>Dịch vụ</h3>
+<ul>
+<li><a href="#">Dịch vụ di chuyển nhà</a></li>
+<li><a href="#">Kho lưu trữ - phân phối</a></li>
+<li><a href="#">Hàng hóa dự án</a></li>
+<li><a href="#">Hàng hóa trong các dịch vụ vận chuyển</a></li>
+<li><a href="#">Dịch vụ giải phóng mặt bằng tùy chỉnh</a></li>
+<li><a href="#">Giao thông vận tải nội địa</a></li>
+<li><a href="#">Vận chuyển biển</a></li>
+<li><a href="#">Vận chuyển hàng không</a></li>
+</ul>
+</div>
+<div class="footer-map">
+<h3>Bản đồ Google</h3>
+<div class="google-map">
+<iframe allowfullscreen="" height="150" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.7464370154726!2d106.7533984!3d10.906865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d95caa3a22d9%3A0x2cb11f756ae959b0!2sBcons%20Garden!5e0!3m2!1svi!2s!4v1744704909839!5m2!1svi!2s" style="border:0;" width="100%"></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>Bản quyền 2025 Thaducologists.vn</p>
+</div>
+</footer>
+
+<div class="social-fixed">
+<a href="#" title="WhatsApp">
+<img alt="WhatsApp" src="img/whatapp.png"/>
+</a>
+<a href="#" title="Facebook">
+<img alt="Facebook" src="img/fb.png"/>
+</a>
+<a href="#" title="Zalo">
+<img alt="Zalo" src="img/zalo.jpg"/>
+</a>
+<a href="#" title="telephone">
+<img alt="Call" src="img/telephone.png"/>
+</a>
+</div>
+<button id="backToTop" onclick="scrollToTop()">↑</button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="../html_input/js/lang-switch.js"></script>
+</body>
+</html>

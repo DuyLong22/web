@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThaDuco Logistics - Your time is our mission</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="/js/translations.js"></script>
+    <script src="/js/language.js"></script>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="Welcome"> Welcome To <strong>THADU CO Logistics.</strong></div>
+            <div class="contact-info">
+              <span><i class="fas fa-phone-alt"></i> +84 938 239 379</span>
+              <span><i class="fas fa-envelope"></i>contact@thaducologistics.vn</span>
+            </div>
+        </div>
+    </div>
+          <!-- Header Section -->
+          <header class="header hidden">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container d-flex align-items-center">
+                    <div class="logo me-4">
+                      <a href="index.html">
+                        <img src="img/logo.png" alt="ThaDuco Logistics">
+                      </a>
+                    </div>
+                    <!-- Hamberger -->
+                    <button class="hamburger d-lg-none" id="hamburgerBtn">
+                      <i class="fas fa-bars"></i>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">ABOUT US</a>
+                            </li>
+                            <li class="nav-item dropdown custom-dropdown">
+                                <a class="nav-link dropdown-toggle" href="services.html">
+                                    SERVICES
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="services1.html">Consultance on Intergrated Logistics</a></li>
+                                  <li><a class="dropdown-item" href="services2.html">Cargo in transit to Laos/Cambodia</a></li>
+                                  <li><a class="dropdown-item" href="services3.html">Multimodal Transport Service</a></li>
+                                  <li><a class="dropdown-item" href="services4.html">Warehousing – Distribution Services</a></li>
+                                  <li><a class="dropdown-item" href="services5.html">Customs Brokerage & Clearance</a></li>
+                                  <li><a class="dropdown-item" href="services6.html">Project Cargo</a></li>
+                                  <li><a class="dropdown-item" href="services7.html">Moving & Distribution Service</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="staff.html">STAFF</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="news.html">NEWS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="activities.html">ACTIVITIES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="recruitment.html">RECRUITMENT</a>
+                            </li>
+                            <li class="nav-item contact-item">
+                                <a class="nav-link" href="contact.html">CONTACT</a>
+                            </li>
+    
+                            <div class="language-selector ms-3">
+                              <a href="javascript:void(0)" data-lang="en" onclick="switchLanguage('en')"><img src="img/flagen.jpg" alt="English" class="flag-icon"> EN</a>
+                              <a href="javascript:void(0)" data-lang="vi" onclick="switchLanguage('vi')"><img src="img/flagvn.png" alt="Vietnamese" class="flag-icon"> VI</a>
+                            </div>
+
+                        </ul>
+                    </div>
+                    <div class="search-box d-none d-lg-block">
+                      <div class="search-container">
+                          <input type="text" class="search-input" placeholder="Search...">
+                          <button class="search-button">
+                              <i class="fas fa-search"></i>
+                          </button>
+                      </div>
+                  </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="menu-backdrop" id="menuBackdrop"></div>
+
+        <style>
+          .menu-backdrop {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5); /* màu nền tối mờ */
+            z-index: 9997;
+            display: none;
+          }
+          .menu-backdrop.active {
+            display: block;
+          }          
+        </style>
+    
+      <!-- Fullscreen Mobile Menu -->
+      <div class="mobile-menu-overlay" id="mobileMenu">
+        <button class="close-btn" id="closeMenu"><i class="fas fa-times"></i></button>
+        <div class="search-mobile-container">
+          <input type="text" placeholder="Search..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <ul class="menu-list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li class="has-dropdown">
+            <div class="dropdown-header">
+              <a href="services.html" class="services-link">SERVICES</a>
+              <span class="dropdown-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <ul class="submenu">
+              <li><a class="dropdown-item" href="services1.html">Consultance on Intergrated Logistics</a></li>
+              <li><a class="dropdown-item" href="services2.html">Cargo in transit to Laos/Cambodia</a></li>
+              <li><a class="dropdown-item" href="services3.html">Multimodal Transport Service</a></li>
+              <li><a class="dropdown-item" href="services4.html">Warehousing – Distribution Services</a></li>
+              <li><a class="dropdown-item" href="services5.html">Customs Brokerage & Clearance</a></li>
+              <li><a class="dropdown-item" href="services6.html">Project Cargo</a></li>
+              <li><a class="dropdown-item" href="services7.html">Moving & Distribution Service</a></li>
+            </ul>
+          </li>
+          <li><a href="staff.html">STAFF</a></li>
+          <li><a href="news.html">NEWS</a></li>
+          <li><a href="activities.html">ACTIVITIES</a></li>
+          <li><a href="recruitment.html">RECRUITMENT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="language-selector mobile-language-selector">
+              <a href="javascript:void(0)" data-lang="en" onclick="switchLanguage('en')"><img src="img/flagen.jpg" alt="English" class="flag-icon"> EN</a>
+              <a href="javascript:void(0)" data-lang="vi" onclick="switchLanguage('vi')"><img src="img/flagvn.png" alt="Vietnamese" class="flag-icon"> VI</a>
+          </div>
+      </div>
+    
+    <!-- CSS -->
+    <style>
+   /* Toàn bộ body */
+body {
+  font-family: 'Archivo', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--white-color);
+}
+
+/* Khi menu di động mở, không cuộn trang */
+body.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Hamburger menu */
+.hamburger {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 5px;
+  font-size: 13px;
+  z-index: 9999;
+}
+
+/* Submenu */
+.submenu {
+  padding: 0;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+  box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+}
+
+.submenu li a {
+  display: block;
+  padding: 6px 15px;
+  margin: 0;
+  line-height: 1.3;
+  font-size: 16px;
+  color: #666666;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  background-color: #ddd; /* Màu nền khi hover */
+}
+
+/* Khi dropdown mở */
+.has-dropdown.open .dropdown-header a {
+  color: #111111D9;
+}
+
+.has-dropdown.open .submenu {
+  display: flex;
+  background-color: #F5F5F5;
+}
+
+.has-dropdown .dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-header a {
+  font-size: 12px;
+}
+
+.dropdown-toggle-icon {
+  cursor: pointer;
+  padding-left: 10px;
+  color: #666666D9;
+}
+
+/* Mobile menu overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%; /* Có thể điều chỉnh */
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 9998;
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+  box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+}
+
+.mobile-menu-overlay.active {
+  display: flex;
+}
+
+/* Nút đóng menu */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+/* Danh sách menu */
+.menu-list {
+  list-style: none;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.menu-list > li {
+  padding: 12px 0;
+  color: #666666;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-list > a {
+  text-decoration: none;
+  color: #666666D9;
+}
+
+/* Search container trong mobile menu */
+.search-mobile-container {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+
+.search-mobile-container input {
+  border: none;
+  flex: 1;
+  outline: none;
+  padding-left: 10px;
+}
+
+.search-mobile-container button {
+  background: none;
+  border: none;
+  font-size: 16px;
+}
+    </style>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <video autoplay muted loop class="hero-video">
+            <source src="img/video-banner-isolution.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1>THADU CO TRADING & SERVICES CO., LTD</h1>
+                <h2>YOUR TIME IS OUR MISSION</h2>
+                <a href="about.html" class="btn btn-primary">SEE MORE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="img/staff.png" alt="Staffs">
+                        </div>
+                        <div class="feature-text">
+                            <h3>Staffs</h3>
+                            <p>We have a team with extensive experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="img/network.png" alt="Network">
+                        </div>
+                        <div class="feature-text">
+                            <h3>Network</h3>
+                            <p>More than 150 countries and territories</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="img/support.png" alt="Support">
+                        </div>
+                        <div class="feature-text">
+                            <h3>Support</h3>
+                            <p>24/7 consultancy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="img/transport.png" alt="Transportation">
+                        </div>
+                        <div class="feature-text">
+                            <h3>bonded warehouse and Transportation</h3>
+                            <p>Global and Safety</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="img/hinh1.jpg" alt="Logistics Services" class="img-fluid">
+                </div>
+                <div class="about-text">
+                    <h2>THADU CO TRADING & SERVICES</h2>
+                    <h3>YOUR TIME IS OUR MISSION</h3>
+                    <p><strong>THADU CO TRADING & SERVICES CO.</strong> is a leading unit in the field of logistics in Vietnam. With a team of experienced experts and modern technology systems, we provide a variety of logistics services, from transportation to warehouse management, to meet all customer needs with trust and efficiency high yield.</p>
+                    <a href="about.html" class="btn btn-primary">SEE MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Section -->
+    <section id="staff" class="staff-section">
+        <div class="container">
+            <h2 class="text-center">HR Organizational Structure</h2>
+            <h3 class="text-center">THADU CO TRADING & SERVICES </h3>
+            <h4 class="text-center">YOUR TIME IS OUR MISSION</h4>
+            <div class="staff-structure">
+                <img src="img/s.jpg" alt="Staff Structure" class="img-fluid">
+            </div>
+            <div class="text-center">
+                <a href="staff.html" class="btn btn-primary">SEE MORE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shipping Process -->
+    <section class="shipping-process">
+        <div class="container">
+          <!-- Left Column: Title + Steps -->
+          <div class="shipping-content">
+            <div class="shipping-process-content">
+              <h2>Shipping Process</h2>
+              <h3>THADU CO TRADING & SERVICES</h3>
+              <h4>YOUR TIME IS OUR MISSION</h4>
+            </div>
+            <!-- Steps as one column -->
+            <div class="process-steps">
+            <div class="step-column left-column">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Step 1</h4>
+                  <p>Get customer information</p>
+                </div>
+              </div>
+      
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Step 2</h4>
+                  <p>Quote according to customer needs</p>
+                </div>
+              </div>
+      
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Step 3</h4>
+                  <p>Check shipment status</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="step-column right-column">
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Step 4</h4>
+                  <p>Track and notify customers about shipments</p>
+                </div>
+              </div>
+      
+              <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                  <h4>Step 5</h4>
+                  <p>Goods arrive at recipient's destination</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+      
+          <!-- Right Column: Image -->
+          <div class="shipping-image">
+            <img src="img/hinh2.jpg" alt="Shipping Process" class="img-fluid">
+          </div>
+        </div>
+      </section>
+      
+
+   <!-- Services Section -->
+   <section class="services">
+    <div class="container">
+      <h2>OUR SERVICES</h2>
+      <h3>THADU CO TRADING & SERVICES</h3>
+      <h4>YOUR TIME IS OUR MISSION</h4>
+      <div class="services-grid">
+        <div class="services-row row-top">
+        <a href="services1.html" class="service-item">
+          <div class="service-image">
+            <img src="https://ext.same-assets.com/1141012312/2285503477.jpeg" alt="Consultance">
+          </div>
+          <h4>Consultance on Intergrated Logistics & Supply Chain Management</h4>
+        </a>
+        <a href="services2.html" class="service-item">
+          <div class="service-image">
+            <img src="https://ext.same-assets.com/1141012312/30877369.jpeg" alt="Cargo Transit">
+          </div>
+          <h4>Cargo in transit to Laos/ Cambodia</h4>
+        </a>
+        <a href="services3.html" class="service-item">
+          <div class="service-image">
+            <img src="https://ext.same-assets.com/1141012312/1443369914.jpeg" alt="Multimodal Transport">
+          </div>
+          <h4>Multimodal Transport Service</h4>
+        </a>
+        </div>
+        <div class="services-row row-bottom">
+        <a href="services4.html" class="service-item">
+          <div class="service-image">
+            <img src="https://ext.same-assets.com/1141012312/2744325528.jpeg" alt="Door to Door">
+          </div>
+          <h4>Door to Door Service</h4>
+        </a>
+        <a href="services5.html" class="service-item">
+          <div class="service-image">
+            <img src="https://ext.same-assets.com/1141012312/3420321818.jpeg" alt="Project Cargo">
+          </div>
+          <h4>Project Cargo</h4>
+        </a>
+        <a href="services6.html" class="service-item">
+          <div class="service-image">
+            <img src="https://ext.same-assets.com/1141012312/205315616.jpeg" alt="Customs Brokerage">
+          </div>
+          <h4>Customs Brokerage & Clearance</h4>
+        </a>
+        <a href="services7.html" class="service-item">
+          <div class="service-image">
+            <img src="https://ext.same-assets.com/1141012312/4287967522.jpeg" alt="Moving & Distribution">
+          </div>
+          <h4>Moving & Distribution Service</h4>
+        </a>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+     <!-- Choose Us Section -->
+     <section class="choose-us">
+        <div class="container">
+          <h2>Why Should You Choose?</h2>
+          <h3>THADU CO TRADING & SERVICES</h3>
+          <h4>YOUR TIME IS OUR MISSION</h4>
+          <div class="choose-content">
+            <div class="choose-form">
+              <h4>Leave your information to receive free consultation!</h4>
+              <form id="contact-form" class="consultation-form">
+                <div class="form-group">
+                  <input type="text" name="name" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                  <input type="text" name="phone" placeholder="Your phone number">
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" placeholder="Your email">
+                </div>
+                <div class="form-group">
+                  <textarea name="message" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">SEND</button>
+              </form>
+            </div>
+            <div class="choose-text">
+              <p>THADU CO TRADING & SERVICES offer comprehensive logistics solutions for manufacturers and trading companies, partnering with emerging and established brands in primarily.</p>
+              <p>THADU CO TRADING & SERVICES employees are given the freedom to pursue their passions and work in an environment that nurtures their interests, it sets the stage for exceptional results and a thriving workforce!</p>
+              <p>Provide effective Standard Operating Procedure for each inquiry at affordability cost implementation.</p>
+              <p>You will also be assured of timely and guaranteed delivery. We promise you a delivery solution that you no longer need to worry about.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    
+
+      <!-- News Section -->
+    <section class="news">
+      <div class="container">
+        <h2>News</h2>
+        <h3>THADU CO TRADING & SERVICES</h3>
+        <h4>YOUR TIME IS OUR MISSION</h4>
+        <div class="news-grid">
+          <a href="news1.html" class="news-item">
+            <div class="news-image">
+              <img src="img/new1.jpg" alt="News 1">
+            </div>
+            <div class="news-content">
+              <h4>U.S. officially imposes Retaliatory Tariffs on over 80 Economies</h4>
+              <p class="news-date">5 April, 2025</p>
+              <p>Starting from 12:01 AM on April 9 2025 (Eastern Time), or 11:01 AM Vietnam time, the United States officially...</p>
+            </div>
+          </a>
+          <a href="news2.html" class="news-item">
+            <div class="news-image">
+              <img src="img/new2.jpg" alt="News 2">
+            </div>
+            <div class="news-content">
+              <h4>U.S. Imposes sweeping tariffs: Vietnam Hit with 46% Rate, Global Supply Chains at Risk</h4>
+              <p class="news-date">16 March, 2025</p>
+              <p>On April 2, 2025, President Donald Trump announced and implemented new tariffs, which he stated...</p>
+            </div>
+          </a>
+          <a href="news3.html" class="news-item">
+            <div class="news-image">
+              <img src="img/new4.jpg" alt="News 3">
+            </div>
+            <div class="news-content">
+              <h4>Vietnams Seafood Export Boom: Opportunity or Supply chain crisis?</h4>
+              <p class="news-date">14 March, 2025</p>
+              <p>Canadas trade policy changes in early 2024 are opening up significant opportunities for Vietnamese exports,...</p>
+            </div>
+          </a>
+          <a href="news4.html" class="news-item">
+            <div class="news-image">
+              <img src="img/new3.jpg" alt="News 4">
+            </div>
+            <div class="news-content">
+              <h4>EU not to impose tax and non-tax defensive measures against Vietnam</h4>
+              <p class="news-date">6 March, 2025</p>
+              <p>In January 2025,The European Union (EU) will not impose tax and non-tax defensive measures against...</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+   <!-- Footer Section -->
+   <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>THADU CO TRADING & SERVICES CO., LTD</h3>
+          <!-- Địa chỉ -->
+            <p><i class="fas fa-map-marker-alt contact-icon"></i> Head Office: WQ43+Q9M, 25a Pham Ngu Lau, Khu Pho Thong Nhat 1, Di An, Binh Duong. Viet Nam</p>
+          <!-- Điện thoại -->
+            <p><i class="fas fa-phone contact-icon"></i> +84 938 239 379</p>
+          <!-- Email -->
+            <p><i class="fas fa-envelope contact-icon"></i> contact@thaducologistics.vn</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fas fa-phone"></i></a>
+          </div>
+        </div>
+        <div class="footer-sitemap">
+          <h3>Site Map</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="recruitment.html">Recruitment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-services">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#">House Moving Services</a></li>
+            <li><a href="#">Warehousing - Distribution</a></li>
+            <li><a href="#">Project Cargo</a></li>
+            <li><a href="#">Cargo in Transit Services</a></li>
+            <li><a href="#">Custom Clearance Services</a></li>
+            <li><a href="#">Inland Transport</a></li>
+            <li><a href="#">Sea Transport</a></li>
+            <li><a href="#">Air Transport</a></li>
+          </ul>
+        </div>
+        <div class="footer-map">
+          <h3>Google Maps</h3>
+          <div class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.7464370154726!2d106.7533984!3d10.906865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d95caa3a22d9%3A0x2cb11f756ae959b0!2sBcons%20Garden!5e0!3m2!1svi!2s!4v1744704909839!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="footer-bottom">
+        <p>Copyright 2025 ThaDucoLogistics.vn</p>
+      </div>
+  </footer>
+
+  <!-- Social Media Fixed Buttons -->
+  <div class="social-fixed">
+    <a href="#" title="WhatsApp">
+      <img src="img/whatapp.png" alt="WhatsApp">
+    </a>
+    <a href="#" title="Facebook">
+      <img src="img/fb.png" alt="Facebook">
+    </a>
+    <a href="#" title="Zalo">
+      <img src="img/zalo.jpg" alt="Zalo">
+    </a>
+    <a href="#" title="telephone">
+      <img src="img/telephone.png" alt="Call">
+    </a>
+  </div>
+
+  <button onclick="scrollToTop()" id="backToTop">↑</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/lang-switch.js"></script>
+    
+</body>
+</html>
